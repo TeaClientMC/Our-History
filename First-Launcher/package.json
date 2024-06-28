@@ -1,0 +1,53 @@
+{
+  "name": "TeaClient",
+  "version": "0.0.1",
+  "description": "A Minecraft client for all",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TeaclientMinecraft/TeaClient"
+  },
+  "author": "Teaclient More info In app/licences/license",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ./app/js/main.js",
+    "watch": "nodemon --exec electron ./app/js/main.js",
+    "build": {
+      "mac-build": "electron-builder --mac",
+      "win-build": "electron-builder --win64",
+      "linux-build": "electron-builder --linux",
+      "build": "electron-builder -mwl"
+    }
+  },
+  "build": {
+    "appId": "TeaClient",
+    "dmg": {
+      "title": "${productName} ${version}"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": "build/icon.ico"
+    }
+  },
+  "dependencies": {
+    "electron-dl": "3.5.0",
+    "electron-updater": "^6.1.1",
+    "minecraft-launcher-core": "3.17.1"
+  },
+  "devDependencies": {
+    "@types/discord-rpc": "^4.0.5",
+    "axios": "^1.4.0",
+    "discord-rpc": "4.0.1",
+    "electron": "^25.2.0",
+    "electron-builder": "^24.5.0",
+    "eslint": "^8.43.0",
+    "gradient-string": "^2.0.2",
+    "nodemon": "^2.0.22"
+  }
+}
