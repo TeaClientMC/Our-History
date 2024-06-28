@@ -44,7 +44,7 @@
     "@types/discord-rpc": "^4.0.5",
     "axios": "^1.4.0",
     "discord-rpc": "4.0.1",
-    "electron": "^25.2.0",
+    "electron": "^25.8.4",
     "electron-builder": "^24.5.0",
     "eslint": "^8.43.0",
     "gradient-string": "^2.0.2",
